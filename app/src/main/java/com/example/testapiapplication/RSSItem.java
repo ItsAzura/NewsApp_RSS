@@ -1,7 +1,5 @@
 package com.example.testapiapplication;
 
-import androidx.annotation.NonNull;
-
 public class RSSItem {
     private final String title;
     private final String link;
@@ -30,11 +28,5 @@ public class RSSItem {
     public String getTime(){
         return time;
     }
-
-    @NonNull
-    public String toString() {
-        return title;
-    }
-
 
 }
