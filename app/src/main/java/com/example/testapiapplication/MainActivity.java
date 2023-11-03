@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             protected List<RSSItem> doInBackground(Void... voids) {
                 try {
-                    return RSSReader.readRSS("https://rss.nytimes.com/services/xml/rss/nyt/Music.xml");
+                    return RSSReader.readRSS("https://rss.nytimes.com/services/xml/rss/nyt/World.xml");
                 } catch (IOException e) {
                     e.printStackTrace();
                     return null;
