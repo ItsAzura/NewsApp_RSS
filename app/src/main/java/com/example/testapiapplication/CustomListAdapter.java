@@ -1,5 +1,6 @@
 package com.example.testapiapplication;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,8 +11,8 @@ import android.widget.TextView;
 import java.util.List;
 
 public class CustomListAdapter extends BaseAdapter {
-    private List<RSSItem> itemList;
-    private LayoutInflater layoutInflater;
+    private final List<RSSItem> itemList;
+    private final LayoutInflater layoutInflater;
 
     public CustomListAdapter(Context context, List<RSSItem> itemList) {
         this.itemList = itemList;
@@ -32,6 +33,7 @@ public class CustomListAdapter extends BaseAdapter {
         return position;
     }
 
+    @SuppressLint("InflateParams")
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         if (view == null) {

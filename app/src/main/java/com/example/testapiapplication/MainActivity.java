@@ -1,22 +1,13 @@
 package com.example.testapiapplication;
 
-import static android.provider.ContactsContract.CommonDataKinds.Website.URL;
-
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
-import org.json.JSONException;
-import org.json.JSONObject;
 import java.io.IOException;
 import java.util.List;
 
@@ -35,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             protected List<RSSItem> doInBackground(Void... voids) {
                 try {
-                    return RSSReader.readRSS("https://vnexpress.net/rss/giai-tri.rss");
+                    return RSSReader.readRSS("https://rss.nytimes.com/services/xml/rss/nyt/PersonalTech.xml");
                 } catch (IOException e) {
                     e.printStackTrace();
                     return null;
